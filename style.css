@@ -1,0 +1,319 @@
+/*colors
+primary
+dark blue - #002856
+bright green - #00F2A5
+secondary
+light blue - #21E2F5
+yellow - #FFED1A
+base
+med blue - #3D5D77
+light med blue - #708EAC
+light grey - #EDEDEE
+extra color
+orange - #FF7A00*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	padding: 5em;
+}
+
+h2 {
+	color: #4d4c4d;
+	font-family: arial, sans-serif;
+	font-size: 1.7rem;
+	font-weight: bold;
+	line-height: 1.1;
+	margin-bottom: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+.container {
+	position: relative; 
+	/*This is relative so the panel will stay 
+	within this container.*/
+	min-width: 400px;
+
+}
+
+.map-container {
+	position: relative;
+	border: 1px solid #002856;
+	overflow: scroll;
+}
+
+.top-panel {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background-color: #002856;
+	width: 20%;
+	height: 100%;
+	min-width: 250px;
+/*	transition: all .5s linear .5s;
+	transition: width .5s linear 0s;*/
+}
+
+.bottom-panel {
+	display: none;
+}
+
+
+fieldset {
+	margin: 10px 10px 5px 10px;
+	padding: 0px 0px 10px 0px;
+	border-width: 0px;
+	border-bottom-width: 1px;
+	border-color: #fff;
+}
+
+fieldset.about {
+	border-width: 0px;
+	padding-top: 5px;
+}
+
+fieldset.search {
+	margin-top: 5px;
+}
+
+/*fieldset:last-of-type {
+	border-bottom-width: 0px;
+}*/
+
+legend {
+	font-family: arial, sans-serif;
+	font-size: 60%;
+	letter-spacing: .03em;
+	color: #EDEDEE;
+	text-transform: uppercase;
+}
+
+input {
+	margin: 5px;
+}
+
+input[type=radio] {
+
+}
+
+input[type=radio][checked] {
+
+}
+
+label {
+	font-family: arial, sans-serif;
+	font-size: 70%;
+	letter-spacing: .03em;
+	color: #EDEDEE;
+	width: 6em;
+}
+
+img {
+	margin-top: 5px;
+}
+
+.search legend {
+/*	float: left;*/
+	display: inline;
+	position: relative;
+	top: 17px;
+}
+
+/*input[type=search] {
+	float: left;
+	margin-top: 0px;
+}
+*/
+.search img {
+	display: inline;
+	margin-left: 30px;
+	margin-top: 0px;	
+}
+
+@media screen and (max-width: 800px) {
+
+	body {
+		padding: 3em;
+	}
+
+	.map-container {
+		top: 180px;
+		min-width: 465px;
+	}
+
+	.top-panel {
+		width: 100%;
+		height: 180px;
+		min-width: 465px;
+	}
+
+	.top-panel .about{
+		visibility: hidden;
+	}
+
+	.right-col {
+		float: left;
+		display: inline;
+		width: 200px;
+		height: 100%;
+	}
+
+	.right-col fieldset {
+		margin-left: 0px;
+	}
+
+	.left-col {
+		float: left;
+		display: inline;
+		/*width: 49%;*/
+		height: 100%;
+	}
+
+	fieldset.data-options {
+		border-width: 0px;
+		margin-left: 20px;
+		border-right: 1px solid white;
+	}
+
+	.bottom-panel {
+		display: unset;
+		position: absolute;
+		background-color: #002856;
+		top: 580px;
+		width: 100%;
+		min-width: 465px;
+	}
+
+	.bottom-panel .about {
+		margin-left: 20px;
+	}
+
+	fieldset {
+		display: inline;
+		width: 200px;
+		/*float: left;*/
+		padding: 0px;
+		padding-bottom: 5px;
+	}
+
+	fieldset.search {
+		margin-top: 10px;
+		padding-bottom: 5px;
+	}
+
+	.search legend {
+		display: block;
+		position: static;
+		/*top: 17px;*/
+	}
+
+	.search img {
+		display: block;
+		margin-left: 0px;
+		margin-top: 5px;
+		padding-bottom: 5px;	
+	}
+
+}
+
+@media screen and (max-width: 550px) {
+
+	body {
+		padding: 1em;
+	}
+
+	.keypng {
+		visibility: hidden;
+	}
+}
+
+.map-list {
+	display: inline;
+	/*border: 1px solid #fff;*/
+	font-family: arial, sans-serif;
+	font-size: 80%;
+	color: #EDEDEE;
+}
+
+
+.about, .about a {
+	font-family: arial, sans-serif;
+	font-size: 80%;
+	color: #EDEDEE;
+}
+
+.about p {
+	margin-bottom: 5px;
+}
+
+.keypng {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+}
+
+.key {
+	background-color: #fff;
+	box-shadow: 1px 1px 5px 3px #999;
+	border-radius: 5px;
+	padding: 10px;
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	min-width: 100px;
+	min-height: 200px;
+	width: 200px;
+}
+
+.key-item {
+
+}
+
+.green, .yellow, .orange {
+	display: inline;
+	float: left;
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	margin: 10px;
+}
+
+.green {
+	background-color: #00F2A5;
+}
+
+.yellow {
+	background-color: #FFED1A;
+}
+
+.orange {
+	background-color: #FF7A00;
+}
+
+
+.myshape {
+
+}
+
+.box {
+	background-color: lime;
+	width: 120px;
+	height: 120px;
+}
+
+.triangle1 {
+	background-color: gray;
+	width: 50%;
+	height: 50%;
+	transform:  scale(2);
+	transform-origin: right bottom;
+}
+
+.circletest {
+	background-color: radial-gradient(red 30%, gray 45%, );
+	width: 100px;
+	height: 100px;
+}
